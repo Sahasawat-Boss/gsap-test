@@ -17,34 +17,48 @@ export default function ScrollWrapper() {
             trigger: containerRef.current,
             start: 'top top',
             end: 'bottom bottom',
-            snap: 1 / (sections.length - 1), // snap to each full section
+            snap: {
+                snapTo: 1 / (sections.length - 1),
+                duration: 0.5,
+                ease: 'power1.inOut',
+            },
             scrub: true,
         });
 
         return () => {
-            ScrollTrigger.getAll().forEach(t => t.kill());
+            ScrollTrigger.getAll().forEach((t) => t.kill());
         };
     }, []);
 
     return (
         <div ref={containerRef} className="pt-16">
             <GameSection
+                id="apex"
+                title="Apex Legends"
+                release="Released February 2019"
+                image="https://cdn1.epicgames.com/spt-assets/5dcd88f4e2094a698ebffa43438edc33/apex-legends-1ugyx.jpg"
+                bgColor="#fff"
+            />
+            <GameSection
+                id="titanfall2"
                 title="Titanfall 2"
                 release="Released October 2016"
-                image="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2024/05/titanfall-2.jpg"
+                image="https://s.isanook.com/ga/0/ud/195/978275/01.jpg"
                 bgColor="#f8f8f8"
             />
             <GameSection
-                title="Star Wars Jedi: Survivor"
-                release="Released April 2023"
-                image="https://cdn1.epicgames.com/offer/5a2ea5980ac147c195775039195a3081/EGS_STARWARSJediSurvivorStandardEdition_RespawnEntertainment_S1_2560x1440-f9e8bb0209bb9ec26636838fbc3dcd85"
-                bgColor="#f0f0ff"
+                id="horizon"
+                title="Horizon Zero Dawn"
+                release="Released August 2020"
+                image="https://cdn1.epicgames.com/3328b08ac1c14540aa265a1a85c07839/offer/hzd_wide-2560x1440-bd312be05c49cf339097777c493cb899.jpg"
+                bgColor="#f3f3f3"
             />
             <GameSection
-                title="Apex Legends"
-                release="Released February 2019"
-                image="https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg"
-                bgColor="#fff"
+                id="valorant"
+                title="Valorant"
+                release="Released June 2020"
+                image="https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Wallpaper-Boys-Dark-Display.jpg"
+                bgColor="#f7f7f7"
             />
         </div>
     );
