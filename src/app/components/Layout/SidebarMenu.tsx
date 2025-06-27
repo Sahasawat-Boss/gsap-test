@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 
 const games = [
-    { id: 'apex', name: 'APEX LEGENDS' },
     { id: 'titanfall2', name: 'TITANFALL 2' },
     { id: 'horizon', name: 'HORIZON ZERO DAWN' },
     { id: 'valorant', name: 'VALORANT' },
+    { id: 'apex', name: 'APEX LEGENDS' },
 ];
 
 
@@ -36,7 +36,7 @@ export default function SidebarMenu() {
     }, []);
 
     return (
-        <aside className="fixed top-50 right-0 z-40 bg-[#ff4c2e] text-white py-6 px-10 w-70 space-y-8 font-bold uppercase text-sm tracking-wide">
+        <aside className="fixed top-22 right-0 z-40 bg-[#ff4c2e] text-white py-10 px-12 w-90 space-y-8 font-bold uppercase text-sm shadow-lg shadow-black/25 tracking-wide">
             {games
                 .slice()
                 // .reverse()

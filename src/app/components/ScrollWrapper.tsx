@@ -33,13 +33,6 @@ export default function ScrollWrapper() {
     return (
         <div ref={containerRef} className="pt-16">
             <GameSection
-                id="apex"
-                title="Apex Legends"
-                release="Released February 2019"
-                image="https://cdn1.epicgames.com/spt-assets/5dcd88f4e2094a698ebffa43438edc33/apex-legends-1ugyx.jpg"
-                bgColor="#fff"
-            />
-            <GameSection
                 id="titanfall2"
                 title="Titanfall 2"
                 release="Released October 2016"
@@ -59,6 +52,13 @@ export default function ScrollWrapper() {
                 release="Released June 2020"
                 image="https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Wallpaper-Boys-Dark-Display.jpg"
                 bgColor="#f7f7f7"
+            />
+            <GameSection
+                id="apex"
+                title="Apex Legends"
+                release="Released February 2019"
+                image="https://cdn1.epicgames.com/spt-assets/5dcd88f4e2094a698ebffa43438edc33/apex-legends-1ugyx.jpg"
+                bgColor="#fff"
             />
         </div>
     );

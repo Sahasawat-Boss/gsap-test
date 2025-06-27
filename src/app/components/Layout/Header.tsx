@@ -1,10 +1,8 @@
-'use client';
-
 import Link from 'next/link';
 
 export default function Header() {
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-[#111] border-b border-neutral-800 shadow-sm">
+        <header className="fixed top-0 left-0 w-full z-50 bg-[#111] border-b border-neutral-800 shadow-md shadow-black/25">
             <div className="max-w-7xl mx-auto px-4 md:px-8 h-24 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3">
@@ -17,7 +15,7 @@ export default function Header() {
                     {/* Text */}
                     <div className="leading-tight">
                         <div className="font-bold text-3xl text-white tracking-tight">Boss</div>
-                        <div className="text-orange-400 text-lg font-semibold tracking-widest">ENTERTAINMENT</div>
+                        <div className="text-orange-400 text-2xl font-bold tracking-widest indent-8">ENTERTAINMENT</div>
                     </div>
                 </Link>
 
